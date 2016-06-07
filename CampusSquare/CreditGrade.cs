@@ -1,5 +1,8 @@
 namespace CampusSquare {
 
+/// <summary>
+/// 一つの講義の成績の情報。
+/// </summary>
 class CreditGrade : IGrade {
 	private int grade, creditNum;
 	private string name;
