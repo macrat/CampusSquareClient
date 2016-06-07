@@ -1,6 +1,10 @@
 using System.Collections.Generic;
 
 
+namespace CampusSquare {
+
 interface IGradeParser {
-   List<IGrade> parse(string gradePage);
+   List<IGrade> Parse(string gradePage);
+}
+
 }

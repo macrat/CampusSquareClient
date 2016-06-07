@@ -1,5 +1,9 @@
+namespace CampusSquare {
+
 interface IGrade {
-   int getGrade();
-   int getCreditNum();
-   string getName();
+	int Grade { get; }
+	int CreditNum { get; }
+	string Name { get; }
+}
+
 }

@@ -5,17 +5,19 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 
+namespace CampusSquare {
+
 class GradeParser : IGradeParser {
-	public List<IGrade> parse(string gradePage) {
+	public List<IGrade> Parse(string gradePage) {
 		List<IGrade> result = new List<IGrade>();
 
 		var dat = (new Regex("<tbody>.+?</tbody>", RegexOptions.Singleline)).Matches(gradePage)[1].Value;
 		var doc = XDocument.Parse(dat);
 		foreach(var x in doc.Descendants("tbody").Elements()){
 			var elm = x.Elements();
-			result.Add(new Grade(
+			result.Add(new CreditGrade(
 				elm.ElementAt(4).Value.Trim(),
-				gradeToInteger(elm.ElementAt(8).Value.Trim()),
+				GradeToInteger(elm.ElementAt(8).Value.Trim()),
 				(int)float.Parse(elm.ElementAt(5).Value.Trim())
 			));
 		}
@@ -23,7 +25,7 @@ class GradeParser : IGradeParser {
 		return result;
 	}
 
-	private static int gradeToInteger(string grade) {
+	private static int GradeToInteger(string grade) {
 		var dic = new Dictionary<string, int>(){
 			{"S", 4},
 			{"A", 3},
@@ -34,4 +36,6 @@ class GradeParser : IGradeParser {
 		};
 		return dic[grade];
 	}
+}
+
 }

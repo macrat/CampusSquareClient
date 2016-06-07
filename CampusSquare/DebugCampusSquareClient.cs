@@ -1,23 +1,27 @@
 using System.IO;
 
 
+namespace CampusSquare {
+
 class DebugCampusSquareClient : ICampusSquareClient {
 	private string html;
 
 
-	public DebugCampusSquareClient(string fname) {
-		html = new StreamReader(fname).ReadToEnd();
+	public DebugCampusSquareClient(string fileName) {
+		html = new StreamReader(fileName).ReadToEnd();
 	}
 
-	public string getGradePage() {
+	public string GetGradePage() {
 		return html;
 	}
 
-	public string getGradePage(int year) {
+	public string GetGradePage(int year) {
 		return html;
 	}
 
-	public string getGradePage(int year, bool first_half) {
+	public string GetGradePage(int year, bool firstHalf) {
 		return html;
 	}
+}
+
 }

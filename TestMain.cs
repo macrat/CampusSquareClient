@@ -1,10 +1,11 @@
 using System;
+using CampusSquare;
 
 
 class TestMain {
 	public static void Main() {
-		foreach(var x in (new GradeParser()).parse((new DebugCampusSquareClient("test.html")).getGradePage())){
-			Console.WriteLine(x.getName() + "\t" + x.getGrade() + "*" + x.getCreditNum());
+		foreach(var x in (new GradeParser()).Parse((new DebugCampusSquareClient("test.html")).GetGradePage())){
+			Console.WriteLine(x.Name + "\t" + x.Grade + "*" + x.CreditNum);
 		}
 	}
 }

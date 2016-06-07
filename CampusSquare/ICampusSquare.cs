@@ -1,7 +1,12 @@
 using System.Collections.Generic;
 
+
+namespace CampusSquare {
+
 interface ICampusSquare {
-   List<IGrade> getGrades();
-   List<IGrade> getGrades(int year);
-   List<IGrade> getGrades(int year, bool first_half);
+	List<IGrade> GetGrades();
+	List<IGrade> GetGrades(int year);
+	List<IGrade> GetGrades(int year, bool firstHalf);
+}
+
 }
