@@ -8,21 +8,9 @@ using System.Text.RegularExpressions;
 namespace CampusSquare {
 
 class GradeParser : IGradeParser {
-	public List<IGrade> Parse(string gradePage) {
-		List<IGrade> result = new List<IGrade>();
-
-		var dat = (new Regex("<tbody>.+?</tbody>", RegexOptions.Singleline)).Matches(gradePage)[1].Value;
-		var doc = XDocument.Parse(dat);
-		foreach(var x in doc.Descendants("tbody").Elements()){
-			var elm = x.Elements();
-			result.Add(new CreditGrade(
-				elm.ElementAt(4).Value.Trim(),
-				GradeToInteger(elm.ElementAt(8).Value.Trim()),
-				(int)float.Parse(elm.ElementAt(5).Value.Trim())
-			));
-		}
-
-		return result;
+	public IEnumerable<IGrade> Parse(string gradePage) {
+		var tbody = (new Regex("<tbody>.+?</tbody>", RegexOptions.Singleline)).Matches(gradePage)[1].Value;
+		return XDocument.Parse(tbody).Descendants("tr").Select(TableLineToGrade);
 	}
 
 	private static int GradeToInteger(string grade) {
@@ -35,6 +23,15 @@ class GradeParser : IGradeParser {
 			{"X", 0},
 		};
 		return dic[grade];
+	}
+
+	private static IGrade TableLineToGrade(XElement tr) {
+		var elms = tr.Elements();
+		return new CreditGrade(
+			elms.ElementAt(4).Value.Trim(),
+			GradeToInteger(elms.ElementAt(8).Value.Trim()),
+			(int)float.Parse(elms.ElementAt(5).Value.Trim())
+		);
 	}
 }
 
