@@ -12,13 +12,13 @@ using System.Threading.Tasks;
 
 namespace CampusSquare
 {
-    class CampusSuqareClient : ICampusSquareClient
+    class CampusSquareClient : ICampusSquareClient
     {
         private const string GET_GRADES_URL = "https://kyo-web.teu.ac.jp/campusweb/campussquare.do?_flowId=SIW0001300-flow";
         private const string LOGIN_URL = "https://kyo-web.teu.ac.jp/campusweb/campussquare.do";
         private string userName, password;
 
-        public CampusSuqareClient(string userName,string password)
+        public CampusSquareClient(string userName,string password)
         {
             var client = new CustomWebClient();
             this.userName = userName;
