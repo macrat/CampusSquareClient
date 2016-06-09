@@ -10,7 +10,7 @@ namespace CampusSquare {
 /// 以下のコードを実行すると、今までに受けた講義の名前を一覧表示します。
 /// <code>
 /// CampusSquare cs = new CampusSquare("your id", "your password");
-/// foreach(IGrade x in cs) {
+/// foreach(IGrade x in cs.GetGrades()) {
 ///     Console.WriteLine(x.Name);
 /// }
 /// </code>
