@@ -15,7 +15,7 @@ namespace CampusSquare {
 /// }
 /// </code>
 /// </example>
-class CampusSquare : AbcCampusSquare {
+public class CampusSquare : AbcCampusSquare {
 	/// <param name="userName">CampusSquareのユーザー名</param>
 	/// <param name="password">CampusSquareにログインする時に使用するパスワード</param>
 	public CampusSquare(string userName, string password) {
