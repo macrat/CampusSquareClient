@@ -5,8 +5,8 @@ namespace CampusSquare {
 /// </summary>
 interface IGrade {
 	/// <summary>
-	/// 成績評価。
-	/// 4ならS、3ならA、2ならB、1ならC、0ならDもしくはXを示す。
+	/// この講義の成績評価。
+	/// Sなら4、Aなら3、Bなら2、Cなら1、DかXなら0。
 	/// </summary>
 	int Grade { get; }
 
@@ -15,9 +15,8 @@ interface IGrade {
 	/// </summary>
 	int CreditNum { get; }
 
-
 	/// <summary>
-	/// 講義の名前。
+	/// この講義の名前。
 	/// </summary>
 	string Name { get; }
 }
