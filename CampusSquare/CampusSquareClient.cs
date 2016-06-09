@@ -16,13 +16,15 @@ namespace CampusSquare
     {
         private const string GET_GRADES_URL = "https://kyo-web.teu.ac.jp/campusweb/campussquare.do?_flowId=SIW0001300-flow";
         private const string LOGIN_URL = "https://kyo-web.teu.ac.jp/campusweb/campussquare.do";
-        private string flowExecutionKey;
+        private string userName, password,flowExecutionKey;
         CustomWebClient client ;
 
 
         public CampusSquareClient(string userName,string password)
         {
             client = new CustomWebClient();
+            this.userName = userName;
+            this.password = password;  
             client = getCookkie(userName,password);
 
         }
@@ -69,6 +71,15 @@ namespace CampusSquare
             client.Headers.Add("User-Agent", "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36");
             client.Encoding = Encoding.UTF8;
 
+            var data = client.UploadValues(LOGIN_URL, new NameValueCollection {
+                { "locale", "ja_JP" },
+                { "_flowId", "USW0009000-flow"},
+                { "requestparames", ""},
+                { "userName", userName},
+                { "password", password},
+            });
+
+            var res = System.Text.Encoding.UTF8.GetString(data);
             var result = client.DownloadString(GET_GRADES_URL);
             Match match = Regex.Match(result, "<input type=\"hidden\" name=\"_flowExecutionKey\" value=\"(.+?)\">");
             match = Regex.Match(match.Value, "(?<=value=\").+?(?=\")");
