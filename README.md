@@ -7,7 +7,10 @@ CampusSquareClient
 GitHubの[リリースページ](https://github.com/macrat/CampusSquareClient/releases)から最新版の **CampusSquare.dll** をダウンロードしてください。
 
 ### VisualStudioの場合
-TODO: あとで書く。
+ソリューションエクスプローラにてプロジェクトを選択します。
+次に「プロジェクト」の「参照の追加」をクリックします。
+すると「参照の追加」ダイアログが開かれるので参照タブを開き、CampusSquare.dllを追加しチェックされていること確認してからOKを押します。
+参照の追加に成功するとソリューションエクスプローラーの参照のツリーにCampusSquare.dllが追加されています。
 
 ### monoの場合
 ダウンロードしたDLLファイルをカレントディレクトリに置いて、引数に`/r:CampusSquare.dll`を渡してコンパイルしてください。
