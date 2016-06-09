@@ -13,12 +13,6 @@ interface ICampusSquare {
 	IEnumerable<IGrade> GetGrades();
 
 	/// <summary>
-	/// ある年度の成績だけを取得する。
-	/// </summary>
-	/// <param name="year">取得する年度</param>
-	IEnumerable<IGrade> GetGrades(int year);
-
-	/// <summary>
 	/// ある年度の前期だけもしくは後期だけの成績を取得する。
 	/// </summary>
 	/// <param name="year">取得する年度</param>
