@@ -23,12 +23,13 @@ TODO: あとで書く。
 ### 取得出来た単位の一覧を表示する
 ``` cs
 using System;
+using System.Collections.Generic;
 using CampusSquare;
 
 
 class Test {
 	public static void Main() {
-		ICampusSquare cs = new CampusSquare.CampusSquare("学籍番号", "パスワード");  // サーバーに接続する。
+		ICampusSquare cs = new CampusSquare.CampusSquare("ID", "パスワード");  // サーバーに接続する。
 		IEnumerable<IGrade> grades = cs.GetGrades();  // 全ての成績を取得する。
 
 		foreach(IGrade grade in grades){
@@ -43,12 +44,13 @@ class Test {
 ### 2015年の後期の成績判定を表示する
 ``` cs
 using System;
+using System.Collections.Generic;
 using CampusSquare;
 
 
 class Test {
 	public static void Main() {
-		ICampusSquare cs = new CampusSquare.CampusSquare("学籍番号", "パスワード");
+		ICampusSquare cs = new CampusSquare.CampusSquare("ID", "パスワード");
 		IEnumerable<IGrade> grades = cs.GetGrades(2015, false);  // 2015年後期の成績を取得する。falseの代わりにtrueと書くと前期の成績を取得出来ます。
 
 		foreach(IGrade grade in grades){
@@ -61,6 +63,7 @@ class Test {
 ### 成績ページを保存したHTMLファイルからデータを読み込む
 ``` cs
 using System;
+using System.Collections.Generic;
 using CampusSquare;
 
 
