@@ -4,7 +4,8 @@ using CampusSquare;
 
 class TestMain {
 	public static void Main() {
-		foreach(var x in (new GradeParser()).Parse((new FileCampusSquareClient("test.html")).GetGradePage())){
+		ICampusSquare cs = new DummyCampusSquare("test.html");
+		foreach(var x in cs.GetGrades()){
 			Console.WriteLine(x.Name + "\t" + x.Grade + "(" + x.GradeNum + ")*" + x.CreditNum);
 		}
 	}
