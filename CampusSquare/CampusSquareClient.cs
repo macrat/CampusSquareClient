@@ -53,15 +53,13 @@ namespace CampusSquare
             client.Headers.Add("User-Agent", "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36");
             client.Encoding = Encoding.UTF8;
 
-            int gakki = firstHalf;
-
             var data = client.UploadValues(LOGIN_URL, new NameValueCollection {
                 { "status", "1" },
                 { "_flowExecutionKey", flowExecutionKey},
                 { "_eventId", "display"},
                 { "spanType", "0"},
                 { "nendo", year.ToString()},
-                { "gakkiKbnCd",gakki}
+                { "gakkiKbnCd", firstHalf ? "1" : "0"}
             });
 
             var res = System.Text.Encoding.UTF8.GetString(data);
