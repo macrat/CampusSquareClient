@@ -3,7 +3,7 @@ namespace CampusSquare {
 /// <summary>
 /// 一つの講義の成績の情報を示すクラスのインターフェース。
 /// </summary>
-interface IGrade {
+public interface IGrade {
 	/// <summary>
 	/// この講義の成績評価。
 	/// </summary>

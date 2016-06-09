@@ -6,7 +6,7 @@ namespace CampusSquare {
 /// <summary>
 /// 成績ページをパースするクラスのインターフェース。
 /// </summary>
-interface IGradeParser {
+public interface IGradeParser {
 	/// <summary>
 	/// 成績ページをパースする。
 	/// </summary>

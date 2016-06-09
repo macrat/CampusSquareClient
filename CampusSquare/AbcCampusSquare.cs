@@ -6,7 +6,7 @@ namespace CampusSquare {
 /// <summary>
 /// ICampusSquareを実装するための共通っぽい仕様をまとめたもの。
 /// </summary>
-abstract class AbcCampusSquare : ICampusSquare {
+public abstract class AbcCampusSquare : ICampusSquare {
 	protected ICampusSquareClient client;
 	protected IGradeParser parser;
 

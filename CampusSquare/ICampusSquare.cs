@@ -6,7 +6,7 @@ namespace CampusSquare {
 /// <summary>
 /// CampusSquareから成績情報を取得するクラスのインターフェース。
 /// </summary>
-interface ICampusSquare {
+public interface ICampusSquare {
 	/// <summary>
 	/// 今までの全ての成績を取得する。
 	/// </summary>

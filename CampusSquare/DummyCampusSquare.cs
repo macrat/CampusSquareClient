@@ -6,7 +6,7 @@ namespace CampusSquare {
 ///
 /// 期間指定に関するオプションが動かないので注意。
 /// </summary>
-class DummyCampusSquare : AbcCampusSquare {
+public class DummyCampusSquare : AbcCampusSquare {
 	/// <param name="fileName">読み込むHTMLファイルのパス</param>
 	public DummyCampusSquare(string fileName) {
 		client = new FileCampusSquareClient(fileName);

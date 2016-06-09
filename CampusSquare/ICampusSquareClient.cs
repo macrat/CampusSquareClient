@@ -3,7 +3,7 @@ namespace CampusSquare {
 /// <summary>
 /// CampusSquareの成績ページのHTMLを取得するためのクラスのインターフェース。
 /// </summary>
-interface ICampusSquareClient {
+public interface ICampusSquareClient {
 	/// <summary>
 	/// 全ての成績が記された成績ページのHTMLデータを取得する。
 	/// </summary>
