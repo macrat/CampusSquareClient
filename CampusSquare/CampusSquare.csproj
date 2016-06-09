@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CampusSuqareClient.cs" />
+    <Compile Include="CampusSuquareClient.cs" />
     <Compile Include="CreditGrade.cs" />
     <Compile Include="FileCampusSquareClient.cs" />
     <Compile Include="GradeParser.cs" />
