@@ -19,14 +19,6 @@ abstract class AbcCampusSquare : ICampusSquare {
 	}
 
 	/// <summary>
-	/// ある年度の成績だけを取得する。
-	/// </summary>
-	/// <param name="year">取得する年度</param>
-	public IEnumerable<IGrade> GetGrades(int year) {
-		return parser.Parse(client.GetGradePage(year));
-	}
-
-	/// <summary>
 	/// ある年度の前期だけもしくは後期だけの成績を取得する。
 	/// </summary>
 	/// <param name="year">取得する年度</param>
