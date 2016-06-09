@@ -30,13 +30,23 @@ namespace CampusSquare
 
         private void Login(string userName, string password)
         {
-            client.Post(URL, new NameValueCollection {
+			if(userName == "" || password == "")
+			{
+				throw new ArgumentException("missing user name or password");
+			}
+
+            var result = client.Post(URL, new NameValueCollection {
                 { "locale", "ja_JP" },
                 { "_flowId", "USW0009000-flow"},
                 { "requestparames", ""},
                 { "userName", userName},
                 { "password", password},
             });
+
+			if(result.Contains("ユーザ名またはパスワードの入力に誤りがあります"))
+			{
+                throw new AuthenticationException();
+			}
         }
 
         private string GetFlowExecutionKey()
