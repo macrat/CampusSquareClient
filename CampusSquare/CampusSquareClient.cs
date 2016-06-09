@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Security.Authentication;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -81,6 +82,11 @@ namespace CampusSquare
 
             var res = System.Text.Encoding.UTF8.GetString(data);
             var result = client.DownloadString(GET_GRADES_URL);
+
+			if(result.Contains("認証エラー")){
+				throw new AuthenticationException();
+			}
+
             Match match = Regex.Match(result, "<input type=\"hidden\" name=\"_flowExecutionKey\" value=\"(.+?)\">");
             match = Regex.Match(match.Value, "(?<=value=\").+?(?=\")");
             flowExecutionKey = match.Value;
