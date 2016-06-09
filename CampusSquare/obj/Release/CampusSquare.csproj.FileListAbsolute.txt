@@ -1,5 +1,0 @@
-C:\Users\5st7\Source\Repos\CampusSquareClient\CampusSquare\bin\Release\CampusSquare.exe.config
-C:\Users\5st7\Source\Repos\CampusSquareClient\CampusSquare\bin\Release\CampusSquare.exe
-C:\Users\5st7\Source\Repos\CampusSquareClient\CampusSquare\bin\Release\CampusSquare.pdb
-C:\Users\5st7\Source\Repos\CampusSquareClient\CampusSquare\obj\Release\CampusSquare.exe
-C:\Users\5st7\Source\Repos\CampusSquareClient\CampusSquare\obj\Release\CampusSquare.pdb

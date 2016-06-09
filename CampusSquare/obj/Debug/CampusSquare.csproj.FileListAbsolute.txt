@@ -1,6 +1,0 @@
-C:\Users\5st7\Source\Repos\CampusSquareClient\CampusSquare\bin\Debug\CampusSquare.exe.config
-C:\Users\5st7\Source\Repos\CampusSquareClient\CampusSquare\obj\Debug\CampusSquare.csprojResolveAssemblyReference.cache
-C:\Users\5st7\Source\Repos\CampusSquareClient\CampusSquare\bin\Debug\CampusSquare.exe
-C:\Users\5st7\Source\Repos\CampusSquareClient\CampusSquare\bin\Debug\CampusSquare.pdb
-C:\Users\5st7\Source\Repos\CampusSquareClient\CampusSquare\obj\Debug\CampusSquare.exe
-C:\Users\5st7\Source\Repos\CampusSquareClient\CampusSquare\obj\Debug\CampusSquare.pdb
