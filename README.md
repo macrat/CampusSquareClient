@@ -3,6 +3,22 @@ CampusSquareClient
 
 大学のCampus Squareで閲覧出来る成績情報をC#から取得するためのライブラリです。
 
+## 使い方
+GitHubの[リリースページ](https://github.com/macrat/CampusSquareClient/releases)から最新版の **CampusSquare.dll** をダウンロードしてください。
+
+### VisualStudioの場合
+TODO: あとで書く。
+
+### monoの場合
+ダウンロードしたDLLファイルをカレントディレクトリに置いて、引数に`/r:CampusSquare.dll`を渡してコンパイルしてください。
+
+実際に実行すると以下のようになると思います。
+``` bash
+	$ mcs /r:CampusSquare.dll test.cs
+```
+
+実行時にDLLファイルが無いとエラーが発生するので注意してください。
+
 ## サンプル
 ### 取得出来た単位の一覧を表示する
 ``` cs
