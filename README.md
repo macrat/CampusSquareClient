@@ -15,7 +15,7 @@ class Test {
 		IEnumerable<IGrade> grades = cs.GetGrades();  // 全ての成績を取得する。
 
 		foreach(IGrade grade in grades){
-			if(grade.Grade > 0){  // Gradeが0のときはD判定かX判定なので除外。
+			if(grade.GradeNum > 0){  // GradeNumが0のときはD判定かX判定なので除外。
 				Console.WriteLine(grade.Name);  // 講義の名前を表示する。
 			}
 		}
