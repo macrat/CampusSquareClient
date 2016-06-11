@@ -29,7 +29,10 @@ class GradeParser : IGradeParser {
 		return new CreditGrade(
 			elms.ElementAt(4).Value.Trim(),
 			elms.ElementAt(8).Value.Trim(),
-			(int)float.Parse(elms.ElementAt(5).Value.Trim())
+			(int)float.Parse(elms.ElementAt(5).Value.Trim()),
+			elms.ElementAt(1).Value.Trim(),
+			elms.ElementAt(2).Value.Trim(),
+			elms.ElementAt(3).Value.Trim()
 		);
 	}
 }

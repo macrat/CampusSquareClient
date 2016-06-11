@@ -24,6 +24,21 @@ public interface IGrade {
 	/// この講義の名前。
 	/// </summary>
 	string Name { get; }
+
+	/// <summary>
+	/// 講義の大区分。
+	/// </summary>
+	string LargeGenre { get; }
+
+	/// <summary>
+	/// 講義の中区分。
+	/// </summary>
+	string MediumGenre { get; }
+
+	/// <summary>
+	/// 講義の小区分。
+	/// </summary>
+	string SmallGenre { get; }
 }
 
 }

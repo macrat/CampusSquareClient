@@ -8,15 +8,21 @@ namespace CampusSquare {
 /// </summary>
 class CreditGrade : IGrade {
 	private int creditNum;
-	private string grade, name;
+	private string grade, name, large, medium, small;
 
 	/// <param name="name">講義の名前。</param>
 	/// <param name="grade">成績評価。SとかAとかBとか。</param>
 	/// <param name="creditNum">単位数。</param>
-	public CreditGrade(string name, string grade, int creditNum) {
+	/// <param name="largeGenre">講義の大区分。</param>
+	/// <param name="mediumGenre">講義の中区分。</param>
+	/// <param name="smallGenre">講義の小区分。</param>
+	public CreditGrade(string name, string grade, int creditNum, string largeGenre, string mediumGenre, string smallGenre) {
 		this.grade = grade;
 		this.creditNum = creditNum;
 		this.name = name;
+		this.large = largeGenre;
+		this.medium = mediumGenre;
+		this.small = smallGenre;
 	}
 
 	/// <summary>
@@ -56,6 +62,27 @@ class CreditGrade : IGrade {
 	/// </summary>
 	public string Name {
 		get { return name; }
+	}
+
+	/// <summary>
+	/// 講義の大区分。
+	/// </summary>
+	public string LargeGenre {
+		get { return large; }
+	}
+
+	/// <summary>
+	/// 講義の中区分。
+	/// </summary>
+	public string MediumGenre {
+		get { return medium; }
+	}
+
+	/// <summary>
+	/// 講義の小区分。
+	/// </summary>
+	public string SmallGenre {
+		get { return small; }
 	}
 }
 
